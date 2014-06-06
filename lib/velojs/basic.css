@@ -1,0 +1,98 @@
+/* @group Structural */
+
+.VWindowContainer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.VScrollView,
+.VTableViewCell,
+.VTableView,
+.VImageView {
+	overflow: hidden;
+}
+.VImageView {
+	position: relative;
+}
+/* @end */
+
+/* @group Window Transitions */
+@-webkit-keyframes VWindowAnimationPop {
+	0%{
+		opacity:0;
+		-webkit-transform:scale3d(0.5, 0.5, 1)
+	}
+	45%{
+		-webkit-transform:scale3d(1.12, 1.12, 1)
+	}
+	80%{
+		-webkit-transform:scale3d(0.9, 0.9, 1);
+		opacity:1
+	}
+	100%{
+		-webkit-transform:scale3d(1, 1, 1);
+		opacity:1
+	}
+}
+@-webkit-keyframes VWindowAnimationFade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes VWindowAnimationZoomFade {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d( 0.8, 0.8, 1);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale3d( 1, 1, 1);
+	}
+}
+@-webkit-keyframes VWindowAnimationShake {
+	0% {
+		-webkit-transform: translate3d( 0, 0, 0);
+	}
+	10% {
+		-webkit-transform: translate3d( -40px, 0, 0);	
+	}
+	30% {
+		-webkit-transform: translate3d( 40px, 0, 0);	
+	}
+	50% {
+		-webkit-transform: translate3d( -40px, 0, 0);	
+	}
+	70% {
+		-webkit-transform: translate3d( 40px, 0, 0);	
+	}
+	100% {
+		-webkit-transform: translate3d( 0, 0, 0);
+	}
+}
+
+.VWindow {
+	position: absolute;
+}
+.VWindow.open.VWindowAnimationPop {
+	-webkit-animation: 'VWindowAnimationPop' 0.5s;
+}
+.VWindow.open.VWindowAnimationFade {
+	-webkit-animation: 'VWindowAnimationFade' 0.8s;
+}
+.VWindow.open.VWindowAnimationZoomFade {
+	-webkit-animation: 'VWindowAnimationZoomFade' 0.5s;
+}
+.VWindow.open.VWindowAnimationPushBottom {
+	-webkit-transition: top 0.5s ease-in-out;
+}
+/* @end */
+
+/* @group Basic Theme */
+
+/* @end */

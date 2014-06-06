@@ -1,0 +1,124 @@
+/* @group Reset */
+
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, code,del, dfn, em, img, q, dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}body {line-height: 1.5;}/* Tables still need 'cellspacing="0"' in the markup. */table {border-collapse: separate;border-spacing: 0;}caption, th, td {text-align: left;font-weight: normal;}table, td, th {vertical-align: middle;}/* Remove possible quote marks (") from <q>, <blockquote>. */blockquote:before, blockquote:after, q:before, q:after {content: "";}blockquote, q {quotes: "" "";}/* Remove annoying border on linked images. */a img {border: none;}
+
+/* @end */
+
+/* @group Basics */
+html {
+	height: 100%;
+}
+* {
+	cursor: default;
+}
+.VButton {
+	cursor: pointer;
+}
+.VWindowTitleBarLabel {
+	display: none;
+}
+.center {
+	text-align: center;
+}
+h1 {
+	font-weight: bold;
+	color: #999;
+	text-shadow: 0 1px 0 #444;
+	padding: 12px auto 10px;
+}
+h2 {
+	font-weight: bold;
+	color: #369;
+	font-size: 14pt;
+	padding: 0 0;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 1px 0 white;
+}
+h4 {
+	color: #555;
+	font-style: italic;
+	xtext-shadow: 0 1px 0 #333;
+}
+p {
+	padding: 5px 0 5px;
+}
+
+body {
+	background: #555;
+	color: #ccc;
+	font-family: "HelveticaNeue", Sans-Serif;
+	height: 100%;
+	min-height: 730px;
+	-webkit-user-select: none;
+}
+
+/* @end */
+
+
+/* @group Theme */
+
+.VWindow {
+	background: -webkit-gradient( linear, left top, left bottom, from(#fff), to(#eee));
+}
+
+.VWindow .VWindowTitleBar {
+	background: transparent;
+}
+.VWindow .VWindowCloseBtn {
+	display: none;
+}
+#mainTabView_contentContainer > .tabContent {
+	background: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+#mainTabView_contentContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 57px;
+	overflow: hidden;
+}
+#mainTabView_tabContainer {
+	background: -webkit-gradient( linear, left top, left bottom, 
+													from(#555),
+													color-stop(0.5, #333),
+													color-stop(0.5, #222),													
+													to(#222));
+	position: absolute;
+	bottom: 0;
+	height: 57px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	display: table;
+}
+#mainTabView_tabContainer .tab {
+	display: table-cell;
+	text-align: center;
+	vertical-align: bottom;
+	padding: 5px;
+}
+#mainTabView_tabContainer .activeTab {
+	color: #fff;
+	box-shadow: inset 0 0 5px #9bf,
+				inset 0 0 5px #9bf,
+				inset 0 0 15px #9bf,
+				inset 0 0 5px #9bf;
+}
+/* @end */
+
+/* @group Overrides */
+
+.hasAction {
+	cursor: pointer;
+}
+
+.floatRight {
+	float: right;
+}
+/* @end */
